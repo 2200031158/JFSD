@@ -1,0 +1,49 @@
+/* Admin Page Layout */
+.admin-page {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Admin Navigation Bar */
+  .admin-navbar {
+    background-color: #333;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed; /* Keep it at the top */
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  .admin-navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .admin-navbar ul li {
+    display: inline;
+  }
+  
+  .admin-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-navbar ul li a:hover {
+    background-color: #007bff;
+  }
+  
+  /* Admin Content */
+  .admin-content {
+    margin-top: 80px; /* To account for the fixed navbar */
+    padding: 20px;
+  }
+  

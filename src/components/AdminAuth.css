@@ -1,0 +1,84 @@
+/* Admin Authentication Page Styles */
+.admin-auth {
+    background-image: url("C:\jfsdproject\internshipsystem\public\internship image.jpeg"); /* Ensure image is in the public folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+/* Title */
+.admin-auth h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Buttons to Switch Between Sign In/Sign Up */
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.auth-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button.active {
+    background-color: #0056b3;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+}
+
+/* Authentication Form Styles */
+.auth-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form label {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.auth-form input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
