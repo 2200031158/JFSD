@@ -1,0 +1,137 @@
+/* EnrolledInternships.css */
+.enrolled-section {
+    padding: 20px;
+}
+
+.enrolled-section h2 {
+    color: #2b3d4f;
+    margin-bottom: 15px;
+}
+
+.enrolled-internship-table {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+.enrolled-internship-table th,
+.enrolled-internship-table td {
+    padding: 15px 20px; /* Match padding from AllInternships */
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.enrolled-internship-table th {
+    background-color: #2b3d4f; /* Blue color */
+    color: white;
+}
+
+.enrolled-internship-table td {
+    background-color: #fafafa;
+}
+
+.enrolled-internship-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.unenroll-button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;  /* Match padding from AllInternships */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.unenroll-button:hover {
+    background-color: #c0392b;
+}
+
+.details-btn {
+    padding: 8px 15px;
+    background-color: #4CAF50; /* Green button similar to apply button in AllInternships */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.message-box {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+/* Modal for details */
+.details-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 350px; /* Smaller container size */
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.details-card {
+    padding: 20px;
+}
+
+.details-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.details-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.details-card strong {
+    color: #333;
+}
+
+.close-btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #2b3d4f; /* Blue color for Close button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #2b3d4f; /* Darker blue on hover */
+}
+
+/* Overlay background when modal is open */
+.details-container:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}

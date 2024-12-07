@@ -1,0 +1,87 @@
+/* ManageInternships Specific Styles */
+.manage-internships-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.manage-internships-header {
+    font-size: 2rem;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.manage-internships-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.manage-internships-form label {
+    font-size: 1rem;
+    color: #34495e;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.manage-internships-form input,
+.manage-internships-form select{
+    color: #000; /* Black text color */
+    background-color: #fff; /* White background */
+}
+.manage-internships-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.manage-internships-form input:focus,
+.manage-internships-form select:focus,
+.manage-internships-form textarea:focus {
+    border: 1px solid #3498db;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.manage-internships-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.manage-internships-form button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.manage-internships-form button:hover {
+    background-color: #217dbb;
+    transform: translateY(-2px);
+}
+
+.manage-internships-form button:active {
+    background-color: #1c6396;
+    transform: translateY(0px);
+}
+
+option {
+    color: #000; /* Black text color for options */
+  }

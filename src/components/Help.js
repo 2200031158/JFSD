@@ -1,8 +1,12 @@
+import './Abouthelp.css';
 const Help = () => {
     return (
-        <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h1>Help Page</h1>
-            <p>If you need assistance, please contact support at support@internpath.com.</p>
+        <div className="help-section" id="help">
+            <h2>Help & Support</h2>
+            <p>
+                Need assistance? Our support team is here to help! Reach out to us at: 
+                <a href="mailto:support@internpath.com" className="email-link"> support@internpath.com</a>.
+            </p>
         </div>
     );
 };

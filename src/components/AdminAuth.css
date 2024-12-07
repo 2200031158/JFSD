@@ -1,84 +1,52 @@
-/* Admin Authentication Page Styles */
-.admin-auth {
-    background-image: url("C:\jfsdproject\internshipsystem\public\internship image.jpeg"); /* Ensure image is in the public folder */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    z-index: 1;
+/* AdminHome Specific Styles */
+.admin-home-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Title */
-.admin-auth h1 {
-    margin-bottom: 20px;
+.admin-home-header {
     font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* Buttons to Switch Between Sign In/Sign Up */
-.auth-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
 }
 
-.auth-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.auth-button.active {
-    background-color: #0056b3;
-}
-
-.auth-button:hover {
-    background-color: #0056b3;
-}
-
-/* Authentication Form Styles */
-.auth-form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.auth-form label {
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-.auth-form input {
-    padding: 10px;
-    margin-top: 5px;
+.slideshow-image {
     width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    height: 400px; /* Adjust height to standardize */
+    object-fit: cover; /* Ensure all images are uniformly displayed */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.submit-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.slideshow-description {
+    margin-top: 15px;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.submit-button:hover {
-    background-color: #218838;
+.slideshow-description h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.slideshow-description p {
+    color: #555;
+    line-height: 1.6;
 }

@@ -1,75 +1,64 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AdminAuth.css'; // External CSS for styling
+import './AdminAuth.css';
 
 const AdminAuth = () => {
-    const [showSignIn, setShowSignIn] = useState(true);
-    const navigate = useNavigate(); // For handling navigation
+    const navigate = useNavigate();
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-    // Handler for Sign Up submission
-    const handleSignUp = (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
-        // You can add logic to validate and submit the data here
+    const handleSignIn = async (event) => {
+        event.preventDefault();
+        const adminCredentials = { username, password };
 
-        // Redirect to Admin component after sign up
-        navigate('/admin'); 
-    };
+        try {
+            const response = await fetch('http://localhost:8080/api/admin/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(adminCredentials),
+            });
 
-    // Handler for Sign In submission
-    const handleSignIn = (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
-        // You can add logic to validate and authenticate the admin here
-
-        // Redirect to Admin component after sign in
-        navigate('/admin'); 
+            if (response.ok) {
+                navigate('/admin');
+            } else {
+                const errorMessage = await response.text();
+                setError(errorMessage || 'Invalid credentials');
+                console.error("Login error:", errorMessage);
+            }
+        } catch (error) {
+            setError('An error occurred during login');
+            console.error("Login request failed:", error);
+        }
     };
 
     return (
         <div className="admin-auth">
-            <h1>Admin Authentication</h1>
-            <div className="auth-buttons">
-                <button 
-                    className={`auth-button ${showSignIn ? 'active' : ''}`} 
-                    onClick={() => setShowSignIn(true)}
-                >
-                    Sign In
-                </button>
-                <button 
-                    className={`auth-button ${!showSignIn ? 'active' : ''}`} 
-                    onClick={() => setShowSignIn(false)}
-                >
-                    Sign Up
-                </button>
-            </div>
-
-            {/* Conditionally Render Sign In or Sign Up form */}
-            {showSignIn ? (
+            <div className="auth-card">
+                <h1 className="auth-title">Admin Login</h1>
                 <form className="auth-form" onSubmit={handleSignIn}>
-                    <h2>Admin Sign In</h2>
-                    <label>Username</label>
-                    <input type="text" placeholder="Enter Username" required />
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter Password" required />
-                    <button className="submit-button" type="submit">Submit</button>
+                    <label className="auth-label">Username</label>
+                    <input
+                        type="text"
+                        className="auth-input"
+                        placeholder="Enter your username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                    />
+                    <label className="auth-label">Password</label>
+                    <input
+                        type="password"
+                        className="auth-input"
+                        placeholder="Enter your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                    <button className="submit-button" type="submit">Log In</button>
+                    {error && <p className="error-message">{error}</p>}
                 </form>
-            ) : (
-                <form className="auth-form" onSubmit={handleSignUp}>
-                    <h2>Admin Sign Up</h2>
-                    <label>Name</label>
-                    <input type="text" placeholder="Enter Full Name" required />
-                    <label>Email</label>
-                    <input type="email" placeholder="Enter Email" required />
-                    <label>Phone Number</label>
-                    <input type="tel" placeholder="Enter Phone Number" required />
-                    <label>Username</label>
-                    <input type="text" placeholder="Enter Username" required />
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter Password" required />
-                    <label>Confirm Password</label>
-                    <input type="password" placeholder="Confirm Password" required />
-                    <button className="submit-button" type="submit">Submit</button>
-                </form>
-            )}
+            </div>
         </div>
     );
 };

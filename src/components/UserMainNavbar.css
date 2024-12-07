@@ -1,0 +1,21 @@
+/* UserMainNavbar.css */
+nav {
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: #2d3e5f;  /* Subtle hover effect */
+}
+
+nav a:active {
+    background: #ff6347;  /* Change color when clicked */
+}

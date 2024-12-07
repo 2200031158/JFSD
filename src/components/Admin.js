@@ -1,33 +1,31 @@
-import { Link, Routes, Route } from 'react-router-dom';
-import Internships from './Internships';
+import { Routes, Route } from 'react-router-dom';
+import AdminNavbar from './AdminNavbar';
+import AdminHome from './AdminHome';
+import ViewInternships from './ViewInternships';
 import AddInternship from './AddInternship';
-import RemoveInternship from './RemoveInternship';
-import './Admin.css'; // External CSS for styling
+import ManageApplications from './ManageApplications'; 
+import Reports from './Reports';
+import ManageInternships from './ManageInternships'; // Import the ManageInternships component
+import AdminProfile from './AdminProfile'; // Import the AdminProfile component
 
 const Admin = () => {
   return (
-    <div className="admin-page">
-      {/* Navigation Bar */}
-      <nav className="admin-navbar">
-        <ul>
-          <li>
-            <Link to="/admin/internships">Internships</Link>
-          </li>
-          <li>
-            <Link to="/admin/add-internship">Add Internship</Link>
-          </li>
-          <li>
-            <Link to="/admin/remove-internship">Remove Internship</Link>
-          </li>
-        </ul>
-      </nav>
-
-      {/* Routes to different components based on selection */}
-      <div className="admin-content">
+    <div>
+      <AdminNavbar />
+      <div style={{ padding: '20px' }}>
         <Routes>
-          <Route path="/internships" element={<Internships />} />
+          {/* Default Route to Admin Home */}
+          <Route path="/admin-home" element={<AdminHome />} />
+
+          {/* Other Admin Routes */}
+          <Route path="/internships" element={<ViewInternships />} />
           <Route path="/add-internship" element={<AddInternship />} />
-          <Route path="/remove-internship" element={<RemoveInternship />} />
+          <Route path="/manage-applications" element={<ManageApplications />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/manage-internships" element={<ManageInternships />} /> {/* Added Manage Internships Route */}
+          
+          {/* Admin Profile Route */}
+          <Route path="/profile" element={<AdminProfile />} /> {/* Correct route for the profile */}
         </Routes>
       </div>
     </div>

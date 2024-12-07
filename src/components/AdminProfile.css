@@ -1,0 +1,43 @@
+.admin-profile-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .admin-profile-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .admin-details {
+    margin-bottom: 20px;
+  }
+  
+  .admin-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .admin-actions {
+    text-align: center;
+  }
+  
+  .admin-actions button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .admin-actions button:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  

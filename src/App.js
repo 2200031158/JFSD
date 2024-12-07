@@ -7,6 +7,7 @@ import Help from './components/Help';
 import Admin from './components/Admin'; // Admin module
 import User from './components/User';
 
+
 function App() {
   return (
     <Router>
@@ -20,8 +21,12 @@ function App() {
           <Route path="/help" element={<Help />} />
 
           {/* Admin Routes */}
-          <Route path="/admin/*" element={<Admin />} /> {/* Admin has nested routes */}
-          <Route path="/user" element={<User />} />
+          <Route path="/admin/*" element={<Admin />}> {/* Admin has nested routes */}
+           
+          </Route>
+
+          {/* User Routes */}
+          <Route path="/user/*" element={<User />} />
         </Routes>
       </div>
     </Router>
