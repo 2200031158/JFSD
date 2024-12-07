@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/JFSD/static/css/main.ca1eec7b.css",
-    "main.js": "/JFSD/static/js/main.64a112cd.js",
+    "main.js": "/JFSD/static/js/main.e9222ed4.js",
     "static/js/453.ddcb46fd.chunk.js": "/JFSD/static/js/453.ddcb46fd.chunk.js",
     "static/media/Ppt City Gray Minimalist Background, Ppt, Ppt Background, Ppt Cover Background Image And Wallpaper for Free Download.jpeg": "/JFSD/static/media/Ppt City Gray Minimalist Background, Ppt, Ppt Background, Ppt Cover Background Image And Wallpaper for Free Download.9b0bfe7266b1b06114d6.jpeg",
     "index.html": "/JFSD/index.html",
     "main.ca1eec7b.css.map": "/JFSD/static/css/main.ca1eec7b.css.map",
-    "main.64a112cd.js.map": "/JFSD/static/js/main.64a112cd.js.map",
+    "main.e9222ed4.js.map": "/JFSD/static/js/main.e9222ed4.js.map",
     "453.ddcb46fd.chunk.js.map": "/JFSD/static/js/453.ddcb46fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca1eec7b.css",
-    "static/js/main.64a112cd.js"
+    "static/js/main.e9222ed4.js"
   ]
 }
